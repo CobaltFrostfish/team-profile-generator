@@ -8,14 +8,14 @@ const generateTeam = (team) => {
         return `
     <div class="card employee-card">
     <div class="card-header bg-primary text-white">
-      <h2 class="card-title">${manager.getName()}</h2>
-      <h3 class="card-title"><i class="fas fa-mug-hot mr-2"></i>${manager.getRole()}</h3>
+        <h2 class="card-title">${manager.getName()}</h2>
+        <h3 class="card-title"><i class="fas fa-mug-hot mr-2"></i>${manager.getRole()}</h3>
     </div>
     <div class="card-body">
     <ul class="list-group">
+    <li class="list-group-item">Email:${manager.getEmail()}</li>
     <li class="list-group-item">id: ${manager.getId()}</li>
-    <li class="list-group-item">${manager.getEmail()}</li>
-    <li class="list-group-item">${manager.getOfficeNumber()}</li>
+    <li class="list-group-item">Office number:${manager.getOfficeNumber()}</li>
     </ul>
     </div>
     </div>`
@@ -25,15 +25,15 @@ const generateTeam = (team) => {
 
         return `
     <div class="card employee-card">
-    <div class="card-header bg-primary text-white">
+    <div class="card-header mb-2 bg-primary text-white">
         <h2 class="card-title">${engineer.getName()}</h2>
         <h3 class="card-title"><i class="fas fa-glasses mr-2"></i>${engineer.getRole()}</h3>
     </div>
     <div class="card-body">
     <ul class="list-group">
+    <li class="list-group-item">Email: ${engineer.getEmail()}</li>
     <li class="list-group-item">id: ${engineer.getId()}</li>
-    <li class="list-group-item">${engineer.getEmail()}</li>
-    <li class="list-group-item">${engineer.getGitHub()}</li>
+    <li class="list-group-item">GitHub: ${engineer.getGitHub()}</li>
     </ul>
     </div>
     </div>`
@@ -49,9 +49,9 @@ const generateTeam = (team) => {
     </div>
     <div class="card-body">
     <ul class="list-group">
+    <li class="list-group-item">Email: ${intern.getEmail()}</li>
     <li class="list-group-item">id: ${intern.getId()}</li>
-    <li class="list-group-item">${intern.getEmail()}</li>
-    <li class="list-group-item">${intern.getSchool()}</li>
+    <li class="list-group-item">School: ${intern.getSchool()}</li>
     </ul>
     </div>
     </div>`
@@ -98,7 +98,7 @@ module.exports = team => {
             </div>
         <div class="container">
         <div class="row">
-        <div class="team-area col-12 d-flex justify-content-center">
+        <div class="team-area col-12 mb-2 d-flex justify-content-center">
             ${generateTeam(team)}
         </div>
         </div>
